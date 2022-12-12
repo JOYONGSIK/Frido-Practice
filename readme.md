@@ -36,8 +36,9 @@ cd ..
 docker run --name frido-practice --gpus all -v $(pwd):/Frido-Practice -dit --ipc=host frido-practice:latest 
 ```
 
-- Docker Attach
+- Docker Start & Attach
 ```
+docker start frido-practice 
 docker attach frido-practice
 ```
 
@@ -55,3 +56,36 @@ source ./venv/bin/activate
 ```
 pip install -e "."
 ```
+
+
+<hr>
+
+
+### Datasets setup 
+> 🎶 Reference : [Frido Repo README](https://github.com/davidhalladay/Frido)
+
+#### COCO-stuff 2017 
+##### Standard split (Layout2I & Label2I), 사용 X 
+- We follow [TwFA](https://openaccess.thecvf.com/content/CVPR2022/papers/Yang_Modeling_Image_Composition_for_Complex_Scene_Generation_CVPR_2022_paper.pdf) and [LAMA](https://openaccess.thecvf.com/content/ICCV2021/papers/Li_Image_Synthesis_From_Layout_With_Locality-Aware_Mask_Adaption_ICCV_2021_paper.pdf) to perform layout-to-image experiment on COCO-stuff 2017, which can be downloaded from [official COCO website](https://cocodataset.org/#download).
+- Please create a folder name `2017` and collect the downloaded data and annotations as follows.
+> Data의 크기가 너무 커서, coco-minitrain을 사용할 계획입니다. [coco-minitrain github](https://github.com/giddyyupp/coco-minitrain)
+
+   <details><summary>COCO-stuff 2017 split file structure</summary>
+
+    ```
+    >2017
+    ├── annotations
+    │   └── captions_val2017.json
+    │   └── ...
+    └── val2017
+        └── 000000000872.jpg
+        └── ... 
+ 
+    # 기존의 coco-Dataset 저장하는법.
+    mkdir 2017 
+    cd coco 
+    wget http://images.cocodataset.org/zips/val2017.zip 
+    unzip val2017.zip  
+    rm val2017.zip  
+    ```
+   </details>
