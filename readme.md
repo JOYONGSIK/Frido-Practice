@@ -1,4 +1,6 @@
 ## NOTICE
+> Reference: [Frido Github Link](https://github.com/davidhalladay/Frido)
+
 - 현재, Mac OS로 개발하였기에 명렁어가 다를 수 있습니다.
 - port 번호, library는 제 컴퓨터에 맞춰 구현되어 있습니다. 알맞게 변경해주시면 감사하겠습니다.   
 - [Colab(Frido-Demo Colab 실습)](https://colab.research.google.com/drive/1m4M6L0y0G97EQjDheeIgJBpfv4ZBJAVG?usp=sharing)에서 Pre-trained 모델을 사용해보려고 했으나, OOM의 문제로 사용할 수 없었습니다. 
@@ -6,6 +8,13 @@
 <hr>
 
 ### Docker Part 
+- <b>MacBook M1 으로 인해, Docker는 구현만 하고 가상환경에서 진행했습니다.</b>
+```python
+# MacBook M1이므로 device = torch.device('mps') 로 진행됩니다.
+# pip install --pre torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/nightly/cpu 
+print(f"mps 사용 가능 여부: {torch.backends.mps.is_available()}")
+print(f"mps 지원 환경 여부: {torch.backends.mps.is_built()}")
+```
 
 - 버전 관리 및 배포를 편하게 하기 위해서, docker 구현.<br>
 
