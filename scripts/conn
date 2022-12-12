@@ -1,0 +1,1 @@
+docker run --name frido-practice --gpus all -v $(pwd):/Frido-Practice -dit --ipc=host Frido-Practice:latest 
