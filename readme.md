@@ -42,6 +42,7 @@ docker start frido-practice
 docker attach frido-practice
 ```
 
+
 <hr>
 
 ### 가상환경 생성
@@ -68,7 +69,6 @@ pip install -e "."
 ##### Standard split (Layout2I & Label2I), 사용 X 
 - We follow [TwFA](https://openaccess.thecvf.com/content/CVPR2022/papers/Yang_Modeling_Image_Composition_for_Complex_Scene_Generation_CVPR_2022_paper.pdf) and [LAMA](https://openaccess.thecvf.com/content/ICCV2021/papers/Li_Image_Synthesis_From_Layout_With_Locality-Aware_Mask_Adaption_ICCV_2021_paper.pdf) to perform layout-to-image experiment on COCO-stuff 2017, which can be downloaded from [official COCO website](https://cocodataset.org/#download).
 - Please create a folder name `2017` and collect the downloaded data and annotations as follows.
-> Data의 크기가 너무 커서, coco-minitrain을 사용할 계획입니다. [coco-minitrain github](https://github.com/giddyyupp/coco-minitrain)
 
    <details><summary>COCO-stuff 2017 split file structure</summary>
 
@@ -89,3 +89,12 @@ pip install -e "."
     rm val2017.zip  
     ```
    </details>
+> Data의 크기가 너무 커서, coco-minitrain을 사용할 계획입니다. -> [coco-minitrain github](https://github.com/giddyyupp/coco-minitrain)
+ 
+
+
+
+ #### 참고하면 좋은 Repo or Colab.
+
+ - [Latent Diffusion Model Colab Version](https://colab.research.google.com/drive/1EfHJc7LqOi9Ad8j1c_MzrOsCstX9UU3T?usp=sharing)
+ - [fine-tuning openai diffusion model Colab Version](https://colab.research.google.com/drive/1VLkKg1OF27x5C5vCJzqH8f-Gf1jzp79p)
