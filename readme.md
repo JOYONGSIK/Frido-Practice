@@ -115,5 +115,3 @@ pip install -e "."
  - 현재까지 진행된 것은 아래의 Colab에 가시면 확인할 수 있습니다. [LDM Training Code Colab Link](https://colab.research.google.com/drive/1ak_IMbnyQ5Y3NP6odXsSmIi8EeUwLExw?usp=sharing)
     - 개발 환경을 구축하였으나, 데이터의 용량 문제와 OOM으로 인해 시간이 지체되었습니다. <br>
     이에 <b>Diffusion Model Tranin Code</b>를 Colab으로 급하게 준비해보았습니다. 
-    - 현재 MNIST Dataset으로 코드가 되어있습니다. 
-    - Practice를 마무리 하지 못해 매우 아쉽습니다. <br> UNIST에서 연구하게 된다면, 더욱 더 좋은 모습 보여드리도록 노력하겠습니다. 
